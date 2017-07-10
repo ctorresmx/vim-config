@@ -25,6 +25,12 @@ nnoremap <space> za
 " Color scheme
 colorscheme molokai
 
+" Split view
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
 " Vundle config
 set nocompatible              " required
 filetype off                  " required
