@@ -26,10 +26,18 @@ nnoremap <space> za
 colorscheme molokai
 
 " Split view
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+map <C-Down> <C-W>j
+map <C-Up> <C-W>k
+map <C-Left> <C-W>h
+map <C-Right> <C-W>l
+
+" Tabs
+noremap <C-S-Left> :tabp<CR>
+noremap <C-S-Right> :tabn<CR>
+
+" Handy shorcuts
+map <C-S-Down> :m .+1<CR>
+map <C-S-Up> :m .-2<CR>
 
 " Vundle config
 set nocompatible              " required
