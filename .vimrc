@@ -2,7 +2,7 @@ set encoding=utf-8
 set nu
 let python_highlight_all=1
 syntax on
-set listchars=tab:>-,space:.
+set listchars=tab:>-,trail:.,precedes:<,extends:>,eol:$
 set list
 set laststatus=2
 set mouse=a
