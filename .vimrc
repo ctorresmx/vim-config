@@ -38,6 +38,8 @@ noremap <C-S-Right> :tabn<CR>
 " Handy shorcuts
 map <C-S-Down> :m .+1<CR>
 map <C-S-Up> :m .-2<CR>
+map <C-x> :!pbcopy<CR>
+vmap <C-c> :w !pbcopy<CR><CR>
 
 " Vundle config
 set nocompatible              " required
