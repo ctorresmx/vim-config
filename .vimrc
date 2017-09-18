@@ -25,6 +25,7 @@ nnoremap <space> za
 
 " Color scheme
 colorscheme molokai
+highlight Normal ctermfg=grey ctermbg=black
 
 " Split view
 map <C-Down> <C-W>j
