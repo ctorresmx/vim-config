@@ -16,7 +16,6 @@ au BufNewFile,BufRead *.py
 	\ set autoindent |
 	\ set fileformat=unix |
 	\ set foldmethod=indent
-autocmd BufWritePost *.py call Flake8()
 
 set colorcolumn=80
 
