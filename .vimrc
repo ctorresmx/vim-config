@@ -6,6 +6,7 @@ set listchars=tab:>-,trail:.,precedes:<,extends:>,eol:$
 set list
 set laststatus=2
 set mouse=a
+set splitright
 
 " PEP8
 au BufNewFile,BufRead *.py
@@ -33,6 +34,9 @@ map <C-Down> <C-W>j
 map <C-Up> <C-W>k
 map <C-Left> <C-W>h
 map <C-Right> <C-W>l
+
+map <S-Down> 5j
+map <S-Up> 5k
 
 " Tabs
 noremap <C-S-Left> :tabp<CR>
@@ -68,6 +72,8 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 
+let g:NERDTreeWinPos="right"
+let g:NERDTreeWinSize=60
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
