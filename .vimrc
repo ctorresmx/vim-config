@@ -8,6 +8,9 @@ set laststatus=2
 set mouse=a
 set splitright
 
+" Bug found when using backspace
+set backspace=indent,eol,start
+
 " PEP8
 au BufNewFile,BufRead *.py
 	\ set tabstop=4 |
@@ -17,6 +20,15 @@ au BufNewFile,BufRead *.py
 	\ set autoindent |
 	\ set fileformat=unix |
 	\ set foldmethod=indent
+
+au BufNewFile,BufRead *.js,*.json
+	\ set fdm=syntax |
+	\ set tabstop=4 |
+	\ set softtabstop=4 |
+	\ set shiftwidth=4 |
+	\ set expandtab |
+	\ set autoindent |
+	\ set fileformat=unix |
 
 set colorcolumn=80
 
@@ -68,10 +80,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'pangloss/vim-javascript'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
-
-let g:NERDTreeWinPos="right"
+let g:NERDTreeWinPos = "right"
 let g:NERDTreeWinSize=60
 
 " All of your Plugins must be added before the following line
