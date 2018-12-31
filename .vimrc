@@ -90,10 +90,14 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'pangloss/vim-javascript'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'janko-m/vim-test'
+Plugin 'aklt/plantuml-syntax'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeWinSize=60
+
+" PlantUML
+let g:plantuml_executable_script='java -jar $HOME/Downloads/plantuml.jar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
