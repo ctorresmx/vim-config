@@ -1,6 +1,8 @@
 set encoding=utf-8
 set nu
 let python_highlight_all=1
+set nocompatible
+filetype plugin on
 syntax on
 set listchars=tab:>-,trail:.,precedes:<,extends:>,eol:$
 set list
@@ -30,7 +32,7 @@ au BufNewFile,BufRead *.js,*.json
 	\ set autoindent |
 	\ set fileformat=unix |
 
-set colorcolumn=80
+set colorcolumn=80,120
 
 " Enable folding
 set foldlevel=99
@@ -60,13 +62,11 @@ map <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
 
 let python_highlight_all=1
-syntax on
 
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Vundle config
-set nocompatible              " required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -86,18 +86,24 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'jerrymarino/iCompleteMe'
 Plugin 'pangloss/vim-javascript'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'janko-m/vim-test'
 Plugin 'aklt/plantuml-syntax'
+Plugin 'file:///Users/carlos/.vim/swift', {'rtp': 'utils/vim/', 'name': 'Swift-Syntax'}
+Plugin 'vimwiki/vimwiki'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeWinSize=60
 
+" VimWiki
+let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
+
 " PlantUML
-let g:plantuml_executable_script='java -jar $HOME/Downloads/plantuml.jar'
+let g:plantuml_executable_script='java -jar $HOME/plantuml.jar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
