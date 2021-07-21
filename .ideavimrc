@@ -1,0 +1,33 @@
+set encoding=utf-8
+set nu
+set listchars=tab:>-,trail:.,precedes:<,extends:>,eol:$
+set list
+set laststatus=2
+
+" Bug found when using backspace
+set backspace=indent,eol,start
+
+set colorcolumn=80
+
+" Enable folding
+set foldlevel=99
+nnoremap <space> za
+
+" Split view
+map <C-Down> <C-W>j
+map <C-Up> <C-W>k
+map <C-Left> <C-W>h
+map <C-Right> <C-W>l
+
+map <S-Down> 5j
+map <S-Up> 5k
+
+" Tabs
+noremap <C-S-Left> :tabp<CR>
+noremap <C-S-Right> :tabn<CR>
+
+" Handy shorcuts
+map <C-S-Down> :m .+1<CR>
+map <C-S-Up> :m .-2<CR>
+map <C-x> :!pbcopy<CR>
+vmap <C-c> :w !pbcopy<CR><CR>
